@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DesignPattern
 {
@@ -26,6 +28,11 @@ namespace DesignPattern
     class SayHelloCommand : ICommand
     {
         private readonly Func<string> _name;
+
+        public SayHelloCommand(IEnumerable<string> args)
+        {
+            
+        }
 
         public SayHelloCommand(Func<string> name)
         {
